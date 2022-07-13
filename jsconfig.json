@@ -24,8 +24,11 @@
       "@services": [
         "./src/services/"
       ],
-      "@store": [
-        "./src/store/"
+      "@utils": [
+        "./src/utils/"
+      ],
+      "@store/*": [
+        "./src/store/*"
       ],
     }
   }

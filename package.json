@@ -13,6 +13,7 @@
     "pc": "cd ios && rm -rf Pods && rm Podfile.lock && pod install && cd .."
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.17.7",
     "@react-navigation/drawer": "^6.4.3",
     "@react-navigation/native": "^6.0.11",
     "fbjs": "^3.0.4",
