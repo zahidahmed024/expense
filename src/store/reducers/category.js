@@ -7,10 +7,11 @@ const initialState = {
 
 const categoryReducer = produce((draft = initialState, action) => {
     const { type, payload } = action;
+    console.log('payload--->', payload)
     switch (type) {
         case actions.ADD_CATEGORY: {
             draft.categories.push(payload);
-            return draft;
+            return draft
         }
 
         default: {

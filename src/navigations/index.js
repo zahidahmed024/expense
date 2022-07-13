@@ -1,5 +1,7 @@
-import DrawerNavigation from './DrawerNavigation'
+import DrawerNavigator from './DrawerNavigator'
+import DashboardNavigator from './DashboardNavigator'
 
 export {
-    DrawerNavigation
+    DrawerNavigator,
+    DashboardNavigator
 }

@@ -1,3 +1,5 @@
-export const strings = {
-    test: "test string"
+import colors from './colors'
+
+export {
+    colors
 }

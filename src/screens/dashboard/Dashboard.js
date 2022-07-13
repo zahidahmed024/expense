@@ -2,8 +2,9 @@ import { View, Text, Button } from 'react-native'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addExpense, addCategory } from '@store/actions'
+import { Layout, TextBox, TotalExpense } from '@components'
 
-export default function Dashboard() {
+export default function Dashboard({ navigation }) {
   const [categories, expenses] = useSelector((state) => [state.category.categories, state.expense.expenses])
   const dispatch = useDispatch()
 
@@ -12,29 +13,20 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <View>
-      <Text>Dashboard</Text>
-      <Text>categories : {JSON.stringify(categories)}</Text>
-      <Text>expenses : {JSON.stringify(expenses)}</Text>
-      <Button
-        title='press'
-        onPress={() => {
-          dispatch(addCategory({
-            id: Date.now().toString(),
-            name: "cat2"
-          }))
-        }}
-      />
-      <Button
-        title='press'
-        onPress={() => {
-          dispatch(addExpense({
-            id: Date.now().toString(),
-            categoryId: 'cat1',
-            name: "expanse 1"
-          }))
-        }}
-      />
-    </View>
+    <Layout>
+      <View style={{
+        flex: 1,
+        marginTop: 150,
+        // justifyContent: 'center',
+        alignItems: 'center',
+      }}>
+        {/* <Text>{JSON.stringify(categories)}</Text> */}
+        <TotalExpense />
+        <View style={{ flexDirection: 'row' }}>
+          <TextBox onPress={() => navigation.navigate('exp')} text='expenses' />
+          <TextBox onPress={() => navigation.navigate('category')} text='categories' />
+        </View>
+      </View>
+    </Layout>
   )
 }
