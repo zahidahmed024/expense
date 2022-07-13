@@ -16,14 +16,14 @@ export default function Dashboard({ navigation }) {
     <Layout>
       <View style={{
         flex: 1,
-        marginTop: 150,
+        marginVertical: 150,
         // justifyContent: 'center',
         alignItems: 'center',
       }}>
         {/* <Text>{JSON.stringify(categories)}</Text> */}
         <TotalExpense />
         <View style={{ flexDirection: 'row' }}>
-          <TextBox onPress={() => navigation.navigate('exp')} text='expenses' />
+          {/* <TextBox onPress={() => navigation.navigate('exp')} text='expenses' /> */}
           <TextBox onPress={() => navigation.navigate('category')} text='categories' />
         </View>
       </View>

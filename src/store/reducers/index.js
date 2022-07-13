@@ -5,14 +5,18 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { persistStore, persistReducer } from 'redux-persist'
 
 
-const persistConfig = {
+const categoryPersistConfig = {
+    key: 'category',
+    storage: AsyncStorage,
+}
+const expensePersistConfig = {
     key: 'category',
     storage: AsyncStorage,
 }
 
 const appReducer = combineReducers({
-    category: persistReducer(persistConfig, categoryReducer),
-    expense: expenseReducer,
+    category: persistReducer(categoryPersistConfig, categoryReducer),
+    expense: persistReducer(expensePersistConfig, expenseReducer),
 })
 
 
