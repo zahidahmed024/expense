@@ -18,8 +18,8 @@ const strings = {
     instructions: "Instructions",
     press_drawer: "- press drawer button and select category",
     submit_category: "- add category then navigate to expense",
-    add_expense: "- add expenses by filling up the inputs then filter buttons & expense list will appear",
-    filter: "- press month (this month), week(this week) , all (by category ) buttons to filter expense list as your wish",
+    add_expense_ins: "- add expenses by filling up the inputs then filter buttons & expense list will appear",
+    filter: "- press month (current month), week(current week) , all (by category ) buttons to filter expense list as your wish",
 
 
 

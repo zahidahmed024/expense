@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { colors } from '@constants'
 import { ms, vs } from '@utils'
+import { fontStyle } from '@assets'
 
 export default function ExpenseRenderItem({ amount, date }) {
     return (
@@ -19,8 +20,8 @@ export default function ExpenseRenderItem({ amount, date }) {
                 marginVertical: vs(2)
             }}
         >
-            <Text>{amount}</Text>
-            <Text>{date}</Text>
-        </TouchableOpacity>
+            <Text style={{ ...fontStyle.h5 }}>{amount}</Text>
+            <Text style={{ ...fontStyle.h5 }}> {date}</Text>
+        </TouchableOpacity >
     )
 }

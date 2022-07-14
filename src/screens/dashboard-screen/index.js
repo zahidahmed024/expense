@@ -27,7 +27,7 @@ export default function DashboardScreen({ navigation }) {
         <Text style={{ ...fontStyle.h3 }}>{strings.instructions}:</Text>
         <Text style={{ ...fontStyle.h5 }}>{strings.press_drawer}</Text>
         <Text style={{ ...fontStyle.h5 }}>{strings.submit_category}</Text>
-        <Text style={{ ...fontStyle.h5 }}>{strings.addExpense}</Text>
+        <Text style={{ ...fontStyle.h5 }}>{strings.add_expense_ins}</Text>
         <Text style={{ ...fontStyle.h5 }}>{strings.filter}</Text>
       </View>
     </Layout>

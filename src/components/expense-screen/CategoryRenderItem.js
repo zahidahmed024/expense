@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 import { ms, vs } from '@utils'
 import { colors } from '@constants'
+import { fontStyle } from '@assets'
 
 export default function CategoryRenderItem({ name = "", onPress = null }) {
     return (
@@ -18,7 +19,7 @@ export default function CategoryRenderItem({ name = "", onPress = null }) {
                 borderRadius: ms(8),
             }}
         >
-            <Text>{name}</Text>
+            <Text style={{...fontStyle.h5}}>{name}</Text>
         </TouchableOpacity>
     )
 }
