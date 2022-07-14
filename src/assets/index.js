@@ -1,8 +1,9 @@
-import fonts from "./fonts";
+import { fonts, fontStyle } from "./fonts";
 import icons from "./icons";
 
 
 export {
     fonts,
-    icons
+    icons,
+    fontStyle
 }

@@ -1,17 +1,18 @@
 import * as React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { Dashboard } from '@screens/dashboard';
-import { Expense } from '@screens/expense';
-import { Category } from '@screens/category';
+import DashboardScreen from '@screens/dashboard-screen';
+import ExpenseScreen from '@screens/expense-screen';
+import CategoryScreen from '@screens/category-screen';
+import { appRoutes } from '@constants';
 
 const Drawer = createDrawerNavigator();
 
 export default function DrawerNavigator() {
   return (
     <Drawer.Navigator initialRouteName="Home">
-      <Drawer.Screen name="dashboard" component={Dashboard} />
-      <Drawer.Screen name="category" component={Category} />
-      <Drawer.Screen name="expd" component={Expense} />
+      <Drawer.Screen name={appRoutes.dashBoard} component={DashboardScreen} />
+      <Drawer.Screen name={appRoutes.category} component={CategoryScreen} />
+      <Drawer.Screen name={appRoutes.expense} component={ExpenseScreen} />
     </Drawer.Navigator>
   );
 }
